@@ -5,7 +5,7 @@ services:
   app:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: ./docker/laravel/Dockerfile
     image: php:latest
     container_name: app
     restart: unless-stopped
@@ -51,7 +51,7 @@ services:
 
   # MySQL Service
   db:
-    image: mysql:5.7.22
+    image: mysql:8.0.19
     container_name: db
     restart: unless-stopped
     tty: true
